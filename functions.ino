@@ -60,12 +60,17 @@ int blinkRunner(float sleep = 1000.0,float sleepAugmenter = 0.25)
 	int blinkSet = 1;
 	int blinks = 0;
 	Serial.begin(9600);
-	
+
+	// Iterate until the delay time is less than 1/10 of a second
 	while(sleep > 100)
 	{
+		// Store the number of blinks
 		blinks = blinker(pin,sleep);
-		sleep -= (sleep * sleepAugmenter);
 		
+		// Reduce the delay time period
+		sleep -= (sleep * sleepAugmenter);
+
+		// Print report
 		Serial.print("Number of blinks for BlinkSet ");
 		Serial.print(blinkSet);
 		Serial.print(": ");
