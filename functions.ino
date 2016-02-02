@@ -74,7 +74,8 @@ int blinkRunner(float sleep = 1000.0,float sleepAugmenter = 0.25)
 		Serial.print("Number of blinks for BlinkSet ");
 		Serial.print(blinkSet);
 		Serial.print(": ");
-		Serial.print(blinks + "\n");
+		Serial.print(blinks);
+		Serial.print("\n");
 		
 		blinkSet++;
 	}
